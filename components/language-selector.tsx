@@ -27,7 +27,9 @@ export default function LanguageSelector({ onSelectLanguage }: LanguageSelectorP
         background: "linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 100%)", // Deep dark gradient background
       }}
     >
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary mb-8 text-center">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary mb-8 text-center w-full">
+        {" "}
+        {/* Added w-full for explicit centering */}
         Select Language
         <br />
         भाषा चुनें

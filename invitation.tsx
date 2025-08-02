@@ -143,7 +143,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
               <span className="text-3xl drop-shadow-lg">✨</span>
             </div>
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-3 tracking-wide"
+              className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-3 tracking-wide w-full" // Added w-full for explicit centering
               style={{ textShadow: "3px 3px 6px rgba(0,0,0,0.7)" }} // Stronger text shadow
             >
               {currentContent.title}
@@ -253,7 +253,25 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
                   </p>
                 </div>
               </div>
-              
+              <div className="flex items-center gap-4">
+                <div
+                  className="w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
+                  style={{
+                    background: "linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%)", // Gold gradient for icon background
+                    boxShadow: "0 4px 8px rgba(0,0,0,0.4)",
+                  }}
+                >
+                  <MapPin className="w-7 h-7 text-white" /> {/* Re-added MapPin */}
+                </div>
+                <div>
+                  <p className="font-bold text-lg flex items-center gap-2" style={{ color: "var(--foreground)" }}>
+                    {currentContent.venueLabel}
+                  </p>
+                  <p className="text-base sm:text-lg font-medium" style={{ color: "var(--muted-foreground)" }}>
+                    {currentContent.venue}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
