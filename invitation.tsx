@@ -143,7 +143,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
               <span className="text-3xl drop-shadow-lg">✨</span>
             </div>
             <h1
-              className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-3 tracking-wide w-full" // Added w-full for explicit centering
+              className="text-3xl font-serif text-white mb-3 w-full tracking-[0.020em] sm:text-4xl" // Added w-full for explicit centering
               style={{ textShadow: "3px 3px 6px rgba(0,0,0,0.7)" }} // Stronger text shadow
             >
               {currentContent.title}
@@ -173,7 +173,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
             <div className="flex justify-center mb-2">
               <span className="text-4xl drop-shadow-lg">🙏</span>
             </div>
-            <p className="leading-relaxed text-base sm:text-lg font-medium" style={{ color: "var(--foreground)" }}>
+            <p className="leading-relaxed text-base font-medium sm:text-base" style={{ color: "var(--foreground)" }}>
               {currentContent.intro1}
               <br />
               {currentContent.intro2}
@@ -192,11 +192,11 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
               <p className="text-2xl sm:text-3xl font-serif mb-2 tracking-wide" style={{ color: "var(--primary)" }}>
                 {currentContent.pujaTitle}
               </p>
-              <p className="text-base sm:text-lg" style={{ color: "var(--foreground)" }}>
+              <p className="text-base sm:text-base font-medium" style={{ color: "var(--foreground)" }}>
                 {currentContent.pujaDesc}
               </p>
             </div>
-            <p className="leading-relaxed text-base sm:text-lg" style={{ color: "var(--foreground)" }}>
+            <p className="leading-relaxed text-base" style={{ color: "var(--foreground)" }}>
               {currentContent.blessings}
               <br />
               {currentContent.specialDay}
@@ -272,7 +272,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
               <span className="text-2xl drop-shadow-lg">💌</span>
             </div>
             <p
-              className="text-center leading-relaxed text-base sm:text-lg font-medium"
+              className="text-center leading-relaxed font-medium text-base"
               style={{ color: "var(--primary)" }}
             >
               {currentContent.rsvp}
