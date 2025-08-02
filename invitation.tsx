@@ -143,7 +143,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
               <span className="text-3xl drop-shadow-lg">✨</span>
             </div>
             <h1
-              className="text-4xl font-serif text-white mb-3 tracking-wide"
+              className="text-3xl sm:text-4xl md:text-5xl font-serif text-white mb-3 tracking-wide"
               style={{ textShadow: "3px 3px 6px rgba(0,0,0,0.7)" }} // Stronger text shadow
             >
               {currentContent.title}
@@ -154,7 +154,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
                 background: "linear-gradient(90deg, transparent 0%, var(--foreground) 50%, transparent 100%)", // Light grey divider
               }}
             ></div>
-            <p className="text-xl font-light italic tracking-wide" style={{ color: "var(--foreground)" }}>
+            <p className="text-lg sm:text-xl font-light italic tracking-wide" style={{ color: "var(--foreground)" }}>
               {currentContent.subtitle}
             </p>
           </div>
@@ -162,7 +162,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
 
         {/* Main content */}
         <div
-          className="p-8 space-y-8 relative z-10" // Increased padding and space-y for more breathing room
+          className="p-6 sm:p-8 space-y-6 sm:space-y-8 relative z-10" // Increased padding and space-y for more breathing room
           style={{
             background: "linear-gradient(180deg, var(--card) 0%, var(--background) 100%)",
           }}
@@ -173,7 +173,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
             <div className="flex justify-center mb-2">
               <span className="text-4xl drop-shadow-lg">🙏</span>
             </div>
-            <p className="leading-relaxed text-lg font-medium" style={{ color: "var(--foreground)" }}>
+            <p className="leading-relaxed text-base sm:text-lg font-medium" style={{ color: "var(--foreground)" }}>
               {currentContent.intro1}
               <br />
               {currentContent.intro2}
@@ -189,14 +189,14 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
               <div className="flex justify-center mb-2">
                 <span className="text-3xl drop-shadow-lg">🏠</span>
               </div>
-              <p className="text-3xl font-serif mb-2 tracking-wide" style={{ color: "var(--primary)" }}>
+              <p className="text-2xl sm:text-3xl font-serif mb-2 tracking-wide" style={{ color: "var(--primary)" }}>
                 {currentContent.pujaTitle}
               </p>
-              <p className="text-lg" style={{ color: "var(--foreground)" }}>
+              <p className="text-base sm:text-lg" style={{ color: "var(--foreground)" }}>
                 {currentContent.pujaDesc}
               </p>
             </div>
-            <p className="leading-relaxed text-lg" style={{ color: "var(--foreground)" }}>
+            <p className="leading-relaxed text-base sm:text-lg" style={{ color: "var(--foreground)" }}>
               {currentContent.blessings}
               <br />
               {currentContent.specialDay}
@@ -212,7 +212,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
               boxShadow: "0 6px 12px rgba(0,0,0,0.5)",
             }}
           >
-            <div className="grid gap-5">
+            <div className="grid gap-4 sm:gap-5">
               {" "}
               {/* Increased gap */}
               <div className="flex items-center gap-4">
@@ -229,7 +229,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
                   <p className="font-bold text-lg flex items-center gap-2" style={{ color: "var(--foreground)" }}>
                     {currentContent.dateLabel}
                   </p>
-                  <p className="text-lg font-medium" style={{ color: "var(--muted-foreground)" }}>
+                  <p className="text-base sm:text-lg font-medium" style={{ color: "var(--muted-foreground)" }}>
                     {currentContent.date}
                   </p>
                 </div>
@@ -248,7 +248,7 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
                   <p className="font-bold text-lg flex items-center gap-2" style={{ color: "var(--foreground)" }}>
                     {currentContent.timeLabel}
                   </p>
-                  <p className="text-lg font-medium" style={{ color: "var(--muted-foreground)" }}>
+                  <p className="text-base sm:text-lg font-medium" style={{ color: "var(--muted-foreground)" }}>
                     {currentContent.time}
                   </p>
                 </div>
@@ -266,21 +266,24 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
               boxShadow: "0 6px 12px rgba(0,0,0,0.5)",
             }}
           >
-            <div className="flex justify-center mb-3">
+            <div className="flex justify-center mb-2 sm:mb-3">
               {" "}
               {/* Increased margin */}
               <span className="text-2xl drop-shadow-lg">💌</span>
             </div>
-            <p className="text-center leading-relaxed text-lg font-medium" style={{ color: "var(--primary)" }}>
+            <p
+              className="text-center leading-relaxed text-base sm:text-lg font-medium"
+              style={{ color: "var(--primary)" }}
+            >
               {currentContent.rsvp}
             </p>
           </div>
 
           {/* Closing */}
-          <div className="text-center pt-6">
+          <div className="text-center pt-4 sm:pt-6">
             {" "}
             {/* Increased padding */}
-            <div className="flex items-center justify-center gap-4 mb-3">
+            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2 sm:mb-3">
               {" "}
               {/* Increased gap and margin */}
               <span className="text-2xl drop-shadow-lg">🌟</span>
@@ -299,13 +302,13 @@ export default function GrihaPraveshInvitation({ language }: GrihaPraveshInvitat
               ></div>
               <span className="text-2xl drop-shadow-lg">🌟</span>
             </div>
-            <p className="font-bold text-lg mb-2" style={{ color: "var(--foreground)" }}>
+            <p className="font-bold text-base sm:text-lg mb-2" style={{ color: "var(--foreground)" }}>
               {currentContent.closing}
             </p>
-            <p className="font-serif text-2xl tracking-wide" style={{ color: "var(--primary)" }}>
+            <p className="font-serif text-xl sm:text-2xl tracking-wide" style={{ color: "var(--primary)" }}>
               {currentContent.hosts}
             </p>
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center mt-3 sm:mt-4">
               {" "}
               {/* Increased margin */}
               <span className="text-2xl drop-shadow-lg">🙏✨</span>

@@ -27,15 +27,15 @@ export default function LanguageSelector({ onSelectLanguage }: LanguageSelectorP
         background: "linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 100%)", // Deep dark gradient background
       }}
     >
-      <h1 className="text-4xl md:text-5xl font-serif text-primary mb-8 text-center">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary mb-8 text-center">
         Select Language
         <br />
         भाषा चुनें
       </h1>
-      <div className="flex gap-6">
+      <div className="flex gap-4 sm:gap-6">
         <Button
           onClick={() => handleSelect("en")}
-          className={`px-8 py-4 text-xl rounded-lg font-bold shadow-lg transition-all duration-300 ${shiningButton === "en" ? "animate-shine" : ""}`}
+          className={`px-6 py-3 text-lg sm:px-8 sm:py-4 sm:text-xl rounded-lg font-bold shadow-lg transition-all duration-300 ${shiningButton === "en" ? "animate-shine" : ""}`}
           style={{
             background: "linear-gradient(90deg, var(--primary) 0%, var(--primary-dark) 100%)", // Antique Gold gradient
             color: "var(--primary-foreground)", // Dark text on gold
@@ -45,7 +45,7 @@ export default function LanguageSelector({ onSelectLanguage }: LanguageSelectorP
         </Button>
         <Button
           onClick={() => handleSelect("hi")}
-          className={`px-8 py-4 text-xl rounded-lg font-bold shadow-lg transition-all duration-300 ${shiningButton === "hi" ? "animate-shine" : ""}`}
+          className={`px-6 py-3 text-lg sm:px-8 sm:py-4 sm:text-xl rounded-lg font-bold shadow-lg transition-all duration-300 ${shiningButton === "hi" ? "animate-shine" : ""}`}
           style={{
             background: "linear-gradient(90deg, var(--secondary) 0%, #3a3a3a 100%)", // Darker Silver/Grey gradient
             color: "var(--secondary-foreground)", // Light text on silver
