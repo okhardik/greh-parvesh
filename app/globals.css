@@ -1,0 +1,172 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #0a0a0a; /* Deepest Black */
+  --foreground: #f0f0f0; /* Near White */
+  --card: #1c1c1c; /* Very Dark Grey for card background */
+  --card-foreground: #f0f0f0;
+  --popover: #1c1c1c;
+  --popover-foreground: #f0f0f0;
+  --primary: #b8860b; /* Antique Gold */
+  --primary-dark: #8b6b08; /* Deeper Antique Gold */
+  --primary-foreground: #0a0a0a;
+  --secondary: #4a4a4a; /* Darker Silver/Grey */
+  --secondary-foreground: #f0f0f0;
+  --muted: #2a2a2a; /* Muted dark grey */
+  --muted-foreground: #c0c0c0; /* Lighter grey */
+  --accent: #4a4a4a;
+  --accent-foreground: #f0f0f0;
+  --destructive: #8b0000; /* Dark Red for destructive actions */
+  --destructive-foreground: #f0f0f0;
+  --border: #4a4a4a;
+  --input: #2a2a2a;
+  --ring: #b8860b;
+  --chart-1: #b8860b;
+  --chart-2: #c0c0c0;
+  --chart-3: #4a4a4a;
+  --chart-4: #8b0000;
+  --chart-5: #4b0082;
+  --radius: 0.625rem;
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #f0f0f0;
+  --sidebar-primary: #b8860b;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #4a4a4a;
+  --sidebar-accent-foreground: #f0f0f0;
+  --sidebar-border: #4a4a4a;
+  --sidebar-ring: #b8860b;
+}
+
+.dark {
+  /* In this dark-first theme, dark mode values are similar or slightly adjusted */
+  --background: #0a0a0a;
+  --foreground: #f0f0f0;
+  --card: #1c1c1c;
+  --card-foreground: #f0f0f0;
+  --popover: #1c1c1c;
+  --popover-foreground: #f0f0f0;
+  --primary: #b8860b;
+  --primary-dark: #8b6b08;
+  --primary-foreground: #0a0a0a;
+  --secondary: #4a4a4a;
+  --secondary-foreground: #f0f0f0;
+  --muted: #2a2a2a;
+  --muted-foreground: #c0c0c0;
+  --accent: #4a4a4a;
+  --accent-foreground: #f0f0f0;
+  --destructive: #8b0000;
+  --destructive-foreground: #f0f0f0;
+  --border: #4a4a4a;
+  --input: #2a2a2a;
+  --ring: #b8860b;
+  --chart-1: #b8860b;
+  --chart-2: #c0c0c0;
+  --chart-3: #4a4a4a;
+  --chart-4: #8b0000;
+  --chart-5: #4b0082;
+  --radius: 0.625rem;
+  --sidebar: #0a0a0a;
+  --sidebar-foreground: #f0f0f0;
+  --sidebar-primary: #b8860b;
+  --sidebar-primary-foreground: #0a0a0a;
+  --sidebar-accent: #4a4a4a;
+  --sidebar-accent-foreground: #f0f0f0;
+  --sidebar-border: #4a4a4a;
+  --sidebar-ring: #b8860b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* New: Fade In Up Smooth for overall card entrance */
+@keyframes fadeInUpSmooth {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up-smooth {
+  animation: fadeInUpSmooth 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* New: Shine Effect for buttons */
+@keyframes shine-effect {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3) /* Subtle white shine */, transparent);
+  transform: translateX(-100%);
+  animation: shine-effect 0.8s forwards; /* Adjust duration as needed */
+}
